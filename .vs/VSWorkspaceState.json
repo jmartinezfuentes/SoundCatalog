@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\srcApi",
     "\\srcApi\\SoundCatalog",
-    "\\srcApi\\SoundCatalog\\SoundCatalogAPI"
+    "\\srcApi\\SoundCatalog\\SoundCatalogAPI",
+    "\\srcClient\\sound-catalog"
   ],
+  "SelectedNode": "\\srcApi",
   "PreviewInSolutionExplorer": false
 }
