@@ -2,9 +2,6 @@
 using SendGrid;
 using SendGrid.Helpers.Mail;
 using SoundCatalog.Configuration;
-using System;
-using System.Net;
-using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace SoundCatalog.Services
@@ -28,21 +25,8 @@ namespace SoundCatalog.Services
                 HtmlContent = message
             };
             msg.AddTo(new EmailAddress(email));
-            return client.SendEmailAsync(msg);
-            //SmtpClient client = new SmtpClient(_emailConfiguration.Server, _emailConfiguration.Port)
-            //{
-            //    UseDefaultCredentials = false,
-            //    Credentials = new NetworkCredential(_emailConfiguration.User, _emailConfiguration.Password)
-            //};
 
-            //MailMessage mailMessage = new MailMessage
-            //{
-            //    From = new MailAddress(_emailConfiguration.FromEmail)
-            //};
-            //mailMessage.To.Add(email);
-            //mailMessage.Body = message;
-            //mailMessage.Subject = subject;
-            //return client.SendMailAsync(mailMessage);
+            return client.SendEmailAsync(msg);
         }
     }
 }
